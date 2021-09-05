@@ -11,12 +11,12 @@ App:
   LogFileExt: .log # 日志输出文件的扩展名
 Database:
   DBType: mysql # 数据库类型
-  Username: root  # mysql用户名
+  UserName: root  # mysql用户名
   Password: root  # mysql密码
   Host: 127.0.0.1:3306 # mysql连接地址
   DBName: go_server_mysqldb # mysql数据库名称
   TablePrefix: blog_ # 数据表前缀
-  Charset: utf8 # 字符集
+  Charset: utf8mb4 # 字符集
   ParseTime: True  # 查询结果自动解析为时间
   MaxIdleConns: 10 # Mysql最大空闲连接数，默认不配置，是2个最大空闲连接
   MaxOpenConns: 30 # Mysql最大连接数，默认不配置，是不限制最大连接数

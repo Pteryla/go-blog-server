@@ -1,12 +1,12 @@
 package model
 
-type ArticleTag struct{
+type ArticleTag struct {
 	*Model
-	TagID uint32 `json:"tag_id"`
+	TagID     uint32 `json:"tag_id"`
 	ArticleID uint32 `json:"article_id"`
-	State uint8 `json:"state"`
+	State     uint8  `json:"state"`
 }
 
-func (at ArticleTag) TableName() string{
+func (at ArticleTag) TableName() string {
 	return "blog_article_tag"
 }

@@ -1,9 +1,12 @@
 package setting
 
-import "github.com/spf13/viper"
+import (
+	"fmt"
+	"github.com/spf13/viper"
+)
 
 type Setting struct {
-    vp *viper.Viper
+	vp *viper.Viper
 }
 
 func NewSetting() (*Setting, error) {
@@ -17,12 +20,12 @@ func NewSetting() (*Setting, error) {
 	//读取配置文件
 	err := vp.ReadInConfig()
 	if err != nil {
-	    return nil, err
+		return nil, err
 	}
 	//将读取的配置文件进行输出 可省略
 	err = vp.SafeWriteConfigAs("configs/output.yaml")
 	if err != nil {
-		return nil, err
+		fmt.Println(err)
 	}
 	//返回setting构造
 	return &Setting{vp}, nil
