@@ -1,0 +1,22 @@
+app:
+  defaultpagesize: 10
+  logfileext: .log
+  logfilename: app
+  logsavepath: storage/logs
+  maxpagesize: 100
+database:
+  charset: utf8
+  dbname: go_server_mysqldb
+  dbtype: mysql
+  host: 127.0.0.1:3306
+  maxidleconns: 10
+  maxopenconns: 30
+  parsetime: true
+  password: root
+  tableprefix: blog_
+  username: root
+server:
+  httpport: 8080
+  readtimeout: 60
+  runmode: debug
+  writetimeout: 60
